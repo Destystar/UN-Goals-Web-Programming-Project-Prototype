@@ -49,6 +49,10 @@ li a:visited {
   max-width: 1920px;
 }
 
+.container a {
+  width: calc(100% / 3);
+}
+
 .container img {
   width: 100%;
   height: auto;
