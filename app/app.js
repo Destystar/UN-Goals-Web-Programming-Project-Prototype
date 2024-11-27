@@ -1,15 +1,13 @@
-const express = require("express");
-const app = express();
-const port = 8080;
+var express = require("express");
+var app = express();
 
-app.use(express.static("MainSite"));
+//set the view engine to ejs
+app.set("view engine", "ejs");
 
-app.listen(port, () => {
-  console.log("Connection Successful");
+//index page
+app.get("/", function (req, res) {
+  res.render("index");
 });
 
-app.get("/", (req, res) => {
-  res.sendFile("index.html", (err) => {
-    if (err) console.log(err);
-  });
-});
+app.listen(8080);
+console.log("Server is listening on port 8080");

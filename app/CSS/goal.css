@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  text-decoration: none;
+  font-family: "Orbitron", sans-serif;
+  background-color: #121212;
+  color: #03dac5;
+}
+
+#Img_summary {
+  display: flex;
+  padding: 3rem 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#Summary {
+  padding-left: 6rem;
+  padding-right: 6rem;
+  font-size: 20px;
+  line-height: 28px;
+}
+
+#Img_stats {
+  display: flex;
+  padding: 3rem 4rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#Stats {
+  padding-left: 2rem;
+  padding-right: 6rem;
+}
+
+#List li {
+  margin-top: 18px;
+  font-size: 16px;
+}
+
+#Extra {
+  padding-left: 12rem;
+  padding-right: 2rem;
+  width: 30%;
+}
+
+#SDG_logo {
+  width: 22%;
+}
+
+.navbar {
+  background-color: #b030b0;
+  color: #03dac5;
+  font-size: 24px;
+}
+
+.navbar ul {
+  display: flex;
+  padding: 0;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  list-style-type: none;
+}
+
+.navbar ul li a,
+li a:visited {
+  color: #03dac5;
+  text-decoration: none;
+}
