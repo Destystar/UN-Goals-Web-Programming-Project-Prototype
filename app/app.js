@@ -3,7 +3,16 @@ const app = express();
 const port = 8080;
 const fs = require("fs");
 
-app.use(express.static("MainSite"));
+//set the view engine to ejs
+app.set("view engine", "ejs");
+
+//set the public folder
+app.use(express.static("External Files"));
+
+//index page
+app.get("/", function (req, res) {
+  res.render("index");
+});
 
 app.listen(port, () => {
   console.log("Connection Successful");
