@@ -1,0 +1,17 @@
+{
+    "image": "Assets/land life.webp",
+    "alt": "Icon for Goal 15 - Life on Land",
+    "image2": "Assets/land life extra.jpg",
+    "alt2": "An Elephant in a forest",
+    "title": "Life on Land",
+    "summary": ["Protecting our planet's ecosystems is vital for biodiversity and the",
+        "health of life on land. This goal seeks to halt deforestation, restore",
+        "degraded lands, and promote the sustainable use of natural resources. By",
+        "preserving forests and combating desertification, we not only protect",
+        "wildlife but also strengthen ecosystems that support human life and",
+        "mitigate climate change."],
+    "stats": ["100 million hectares of healthy and productive land were degraded every year from 2015–2019, which is equivalent to 2 times the size of Greenland",
+              "The world is currently facing the largest species extinction event since the dinosaur age",
+              "Protected area coverage of key biodiversity areas has stalled since 2015",
+              "The Kunming-Montreal Global Biodiversity Framework provides a renewed impetus for conserving terrestrial ecosystems, with 4 outcome-oriented goals by 2050 and 23 targets by 2030"]
+}
