@@ -1,18 +1,52 @@
-const express = require("express");
-const app = express();
-const port = 8080;
-const fs = require("fs");
+var express = require("express");
+var app = express();
+var port = 8080;
+var path = require("path");
 
 //set the view engine to ejs
 app.set("view engine", "ejs");
 
+// sets views directory
+app.set('views', path.join(__dirname, 'views'));
+
 //set the public folder
-app.use(express.static("External Files"));
+app.use(express.static("public"));
 
 //index page
-app.get("/", function (req, res) {
+app.get("/", (req, res) => {
   res.render("index");
 });
+
+// energy page
+app.get("/energy", (req, res) => {
+  res.render("energy");
+});
+
+// goal select
+app.get("/goal-select", (req, res) => {
+  res.render("goal-select");
+});
+
+// health
+app.get("/health", (req, res) => {
+  res.render("health");
+});
+
+// land life
+app.get("/land-life", (req, res) => {
+  res.render("land-life");
+});
+
+//signup
+app.get("/signup", (req, res) => {
+  res.render("signup");
+});
+
+//team
+app.get("/team", (req, res) => {
+  res.render("team");
+});
+
 
 app.listen(port, () => {
   console.log("Connection Successful");
