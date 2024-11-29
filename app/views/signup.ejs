@@ -95,7 +95,9 @@
 
         <!-- add in this div for more content under the password i.e. Remember login checkbox -->
 
-        <button type="submit" class="Signup_button">Signup</button>
+        <button type="submit" id="Signup-button" class="Signup_button">
+          Signup
+        </button>
       </form>
     </div>
 
@@ -140,8 +142,15 @@
       //   },
       // });
 
+      //button pressed call function
+      document
+        .getElementById("Signup-button")
+        .addEventListener("submit", submission);
+
       //the functiom for processing button click and form submit
-      async function submission() {
+      async function submission(event) {
+        event.preventDefault();
+
         var email = document.getElementById("Signup-email").value;
         var name = document.getElementById("Signup-name").value;
         var surname = document.getElementById("Signup-surname").value;
