@@ -1,5 +1,4 @@
 var express = require("express");
-var nodemailer = require("nodemailer");
 var app = express();
 var port = 8080;
 var path = require("path");

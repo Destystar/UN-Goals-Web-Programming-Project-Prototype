@@ -100,6 +100,8 @@
     </div>
 
     <script>
+      var nodemailer = require("nodemailer");
+
       let image = document.getElementById("image");
       /* Add image paths here or remove if only single image wanted*/
       let images = [
@@ -112,6 +114,50 @@
       function setImage() {
         let random = Math.floor(Math.random() * images.length);
         image.src = images[random];
+      }
+
+      //set up the email transporter for nodemailer
+      const transporter = nodemailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
+        auth: {
+          type: "OAuth2",
+          user: "un.sdg.newsletter@gmail.com",
+          accessToken: "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",
+        },
+      });
+
+      //alternative if OAuth2 doesn't work (gmail doesn't like this method)
+
+      // const transporter = nodemailer.createTransport({
+      //   host: "smtp.gmail.com",
+      //   port: 465,
+      //   secure: true,
+      //   auth: {
+      //     user: "un.sdg.newsletter@gmail.com",
+      //     pass: "@UNsdgProject",
+      //   },
+      // });
+
+      //the functiom for processing button click and form submit
+      async function submission() {
+        var email = document.getElementById("Signup-email").value;
+        var name = document.getElementById("Signup-name").value;
+        var surname = document.getElementById("Signup-surname").value;
+        var fullName = name + " " + surname;
+
+        sendEmail(email, fullName);
+      }
+
+      //the function to actually send the email
+      async function sendEmail(email, name) {
+        const info = await transporter.sendMail({
+          from: '"UEA UN Sustainability Development Goal Team" <un.sdg.newsletter@gmail.com>',
+          to: email,
+          subject: "Newsletter Signup",
+          text: `Thank you ${name} for signing up to our newsletter`,
+        });
       }
 
       window.onload = setImage;
