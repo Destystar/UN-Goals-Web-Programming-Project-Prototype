@@ -18,6 +18,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/index", (req, res) => {
+  res.render("index");
+});
+
 // energy page
 app.get("/energy", (req, res) => {
   res.render("energy");
@@ -53,11 +57,11 @@ app.listen(port, () => {
   console.log("Connection Successful");
 });
 
-/*app.get("/", (req, res) => {
+app.get("/", (req, res) => {
   res.sendFile("index.html", (err) => {
     if (err) console.log(err);
   });
-});*/
+});
 
 app.get('/health.json', (req, res) => {
   fs.readFile('./health.json', 'utf8', (err, data) => {
