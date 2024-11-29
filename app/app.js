@@ -7,9 +7,6 @@ var path = require("path");
 //set the view engine to ejs
 app.set("view engine", "ejs");
 
-// sets views directory
-app.set('views', path.join(__dirname, 'views'));
-
 //set the public folder
 app.use(express.static("public"));
 
@@ -52,7 +49,6 @@ app.get("/team", (req, res) => {
   res.render("team");
 });
 
-
 app.listen(port, () => {
   console.log("Connection Successful");
 });
@@ -63,8 +59,8 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get('/health.json', (req, res) => {
-  fs.readFile('./health.json', 'utf8', (err, data) => {
+app.get("/health.json", (req, res) => {
+  fs.readFile("./health.json", "utf8", (err, data) => {
     if (err) {
       console.error(err);
     } else {
