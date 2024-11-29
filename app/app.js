@@ -48,10 +48,6 @@ app.get("/team", (req, res) => {
   res.render("team");
 });
 
-app.listen(port, () => {
-  console.log("Connection Successful");
-});
-
 app.get("/", (req, res) => {
   res.sendFile("index.html", (err) => {
     if (err) console.log(err);
@@ -66,4 +62,42 @@ app.get("/health.json", (req, res) => {
       res.json(JSON.parse(data));
     }
   });
+});
+
+// signup form submission
+app.post("/signup", async (req, res) => {
+  try {
+    const { name, email, comment } = req.body;
+
+    // Create transporter object
+    let transporter = nodemailer.createTransport({
+      host: "smtp.gmail.com",
+      port: 587,
+      secure: false,
+      auth: {
+        user: "un.sdg.newsletter@gmail.com",
+        pass: "@UNsdgProject" 
+      }
+    });
+
+    // Configure mail options
+    const mailOptions = {
+      from: "un.sdg.newsletter@gmail.com",
+      to: email,
+      subject: "Newsletter Signup",
+      text: `Thank you ${name} for signing up to our newsletter`
+    };
+
+    // Send email
+    await transporter.sendMail(mailOptions);
+    
+    res.render("signup", { message: "Sign Up successful!" });
+  } catch (error) {
+    console.error(error);
+    res.status(500).render("signup", { error: "Failed to Sign Up" });
+  }
+});
+
+app.listen(port, () => {
+  console.log(`Connection Successful at port ${port}`);
 });
