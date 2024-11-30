@@ -3,6 +3,8 @@ var app = express();
 var port = 8080;
 var path = require("path");
 
+//Comment for sync testing
+
 //set the view engine to ejs
 app.set("view engine", "ejs");
 
