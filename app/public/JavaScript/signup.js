@@ -34,17 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-//The image section
-let image = document.getElementById("image");
+
+
 /* Add image paths here or remove if only single image wanted*/
 let images = [
-  "../Assets/img 1.jpg",
-  "../Assets/img 2.jpg",
-  "../Assets/img 3.jpg",
-  "../Assets/img 4.jpg",
+  "/Assets/img1.jpg",
+  "/Assets/img2.jpg",
+  "/Assets/img3.jpg",
+  "/Assets/img4.jpg",
 ];
 
 function setImage() {
+  let image = document.getElementById("image");  
   let random = Math.floor(Math.random() * images.length);
   image.src = images[random];
 }
