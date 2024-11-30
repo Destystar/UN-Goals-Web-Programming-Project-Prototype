@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
-        const nameInput = document.getElementById('Signup-name');
-        const emailInput = document.getElementById('Signup-email');
-        const commentInput = document.getElementById('comment');
+        var nameInput = document.getElementById('Signup-name');
+        var emailInput = document.getElementById('Signup-email');
+        var commentInput = document.getElementById('comment');
         
         try {
             const response = await fetch('/signup', {
@@ -25,6 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Thank you! We will send you an email.');
                 form.reset();
             } else {
+                var errorMessage = await response.text();
                 throw new Error('Failed to submit form');
             }
         } catch (error) {
