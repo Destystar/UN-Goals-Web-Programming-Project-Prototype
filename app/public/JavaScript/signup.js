@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         var nameInput = document.getElementById('Signup-name');
         var emailInput = document.getElementById('Signup-email');
-        var commentInput = document.getElementById('comment');
+        var commentInput = document.getElementById('Signup-comment');
         
         try {
             const response = await fetch('/signup', {
