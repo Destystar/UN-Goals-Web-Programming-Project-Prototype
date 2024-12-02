@@ -35,6 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Comment for merge
+
 /* Add image paths here or remove if only single image wanted*/
 let images = [
   "/Assets/img1.jpg",
