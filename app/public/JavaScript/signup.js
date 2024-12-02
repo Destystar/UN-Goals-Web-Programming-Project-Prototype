@@ -1,39 +1,50 @@
-const { json } = require("body-parser");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
 
-async function submission() {
-  var email = document.getElementById("Signup-email").value;
-  var name = document.getElementById("Signup-name").value;
-  var surname = document.getElementById("Signup-surname").value;
-  var fullName = name + " " + surname;
-  console.log(email);
-  console.log(name);
-  console.log(surname);
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-  sendEmail(email, fullName);
-}
+    var nameInput = document.getElementById("Signup-name");
+    var emailInput = document.getElementById("Signup-email");
+    var commentInput = document.getElementById("Signup-comment");
 
-const requestHeader = {
-  "Content-Type": application / json,
-};
+    try {
+      const response = await fetch("/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: nameInput.value,
+          email: emailInput.value,
+          comment: commentInput.value,
+        }),
+      });
 
-fetch("/signup"),
-  {
-    method: "POST",
-    Headers: requestHeader,
-    body: json.stringify(submission()),
-  };
+      if (response.ok) {
+        alert("Thank you! We will send you an email.");
+        form.reset();
+      } else {
+        var errorMessage = await response.text();
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
+    }
+  });
+});
 
-//The image section
-let image = document.getElementById("image");
 /* Add image paths here or remove if only single image wanted*/
 let images = [
-  "../Assets/img 1.jpg",
-  "../Assets/img 2.jpg",
-  "../Assets/img 3.jpg",
-  "../Assets/img 4.jpg",
+  "/Assets/img1.jpg",
+  "/Assets/img2.jpg",
+  "/Assets/img3.jpg",
+  "/Assets/img4.jpg",
 ];
 
 function setImage() {
+  let image = document.getElementById("image");
   let random = Math.floor(Math.random() * images.length);
   image.src = images[random];
 }
