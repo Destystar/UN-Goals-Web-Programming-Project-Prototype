@@ -93,7 +93,7 @@ app.post("/signup", async (req, res) => {
 
     res.render("signup", { message: "Sign Up successful!" });
   } catch (error) {
-    console.error(error);
+    console.error("Error in signup route:", error);
     res.status(500).render("signup", { error: "Failed to Sign Up" });
   }
 });

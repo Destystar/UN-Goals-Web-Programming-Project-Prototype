@@ -4,29 +4,28 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    var nameInput = document.getElementById("Signup-name");
-    var emailInput = document.getElementById("Signup-email");
-    var commentInput = document.getElementById("Signup-comment");
-
     try {
+      const nameInput = document.getElementById("Signup-name");
+      const emailInput = document.getElementById("Signup-email");
+      const commentInput = document.getElementById("Signup-comment");
+
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+
       const response = await fetch("/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name: nameInput.value,
-          email: emailInput.value,
-          comment: commentInput.value,
-        }),
+        body: JSON.stringify(data),
       });
 
       if (response.ok) {
         alert("Thank you! We will send you an email.");
         form.reset();
       } else {
-        var errorMessage = await response.text();
-        throw new Error("Failed to submit form");
+        const errorMessage = await response.text();
+        throw new Error(errorMessage);
       }
     } catch (error) {
       console.error("Error:", error);
