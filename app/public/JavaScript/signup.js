@@ -1,61 +1,52 @@
-//The Email Stuff
-const nodemailer = require("nodemailer");
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.querySelector("form");
 
-//button pressed call function
-document.getElementById("Signup-button").addEventListener("submit", submission);
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
 
-async function submission(event) {
-  event.preventDefault();
+    var nameInput = document.getElementById("Signup-name");
+    var emailInput = document.getElementById("Signup-email");
+    var commentInput = document.getElementById("Signup-comment");
 
-  var email = document.getElementById("Signup-email").value;
-  var name = document.getElementById("Signup-name").value;
-  var surname = document.getElementById("Signup-surname").value;
-  var fullName = name + " " + surname;
+    try {
+      const response = await fetch("/signup", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: nameInput.value,
+          email: emailInput.value,
+          comment: commentInput.value,
+        }),
+      });
 
-  sendEmail(email, fullName);
-}
-
-// Create a transporter object
-const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: "un.sdg.newsletter@gmail.com",
-    pass: "xpxo hjuu cayz zvao",
-  },
-});
-
-// Configure the mailoptions object
-const mailOptions = {
-  from: "un.sdg.newsletter@gmail.com",
-  to: email,
-  subject: "Newsletter Signup",
-  text: `Thank you ${fullName} for signing up to our newsletter`,
-};
-
-//the function to actually send the email
-async function sendEmail(email, name) {
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log("Error:", error);
-    } else {
-      console.log("Email sent: ", info.response);
+      if (response.ok) {
+        alert("Thank you! We will send you an email.");
+        form.reset();
+      } else {
+        var errorMessage = await response.text();
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("An error occurred. Please try again.");
     }
   });
-}
+});
 
-//The image section
-//let image = document.getElementById("image");
+//Comment for merge
+
 /* Add image paths here or remove if only single image wanted*/
 let images = [
-  "/Assets/img 1.jpg",
-  "/Assets/img 2.jpg",
-  "/Assets/img 3.jpg",
-  "/Assets/img 4.jpg",
+  "/Assets/img1.jpg",
+  "/Assets/img2.jpg",
+  "/Assets/img3.jpg",
+  "/Assets/img4.jpg",
 ];
 
 function setImage() {
+  let image = document.getElementById("image");
   let random = Math.floor(Math.random() * images.length);
   image.src = images[random];
 }

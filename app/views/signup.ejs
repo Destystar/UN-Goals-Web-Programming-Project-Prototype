@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Create Account</title>
     <link rel="stylesheet" href="CSS/signup.css" />
-    <script src="/app/public/JavaScript/signup.js"></script>
+    <script src="JavaScript/signup.js"></script>
   </head>
 
   <body>
@@ -96,7 +96,12 @@
 
         <!-- add in this div for more content under the password i.e. Remember login checkbox -->
 
-        <button type="submit" id="Signup-button" class="Signup_button">
+        <button
+          type="submit"
+          id="Signup-button"
+          class="Signup_button"
+          onclick="submission()"
+        >
           Signup
         </button>
       </form>
