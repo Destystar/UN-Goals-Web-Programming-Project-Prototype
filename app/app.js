@@ -76,8 +76,8 @@ app.post("/signup", async (req, res) => {
       secure: false,
       auth: {
         user: "un.sdg.newsletter@gmail.com",
-        pass: "@UNsdgProject" 
-      }
+        pass: "@UNsdgProject",
+      },
     });
 
     // Configure mail options
@@ -85,12 +85,12 @@ app.post("/signup", async (req, res) => {
       from: "un.sdg.newsletter@gmail.com",
       to: email,
       subject: "Newsletter Signup",
-      text: `Thank you ${name} for signing up to our newsletter`
+      text: `Thank you ${name} for signing up to our newsletter`,
     };
 
     // Send email
     await transporter.sendMail(mailOptions);
-    
+
     res.render("signup", { message: "Sign Up successful!" });
   } catch (error) {
     console.error(error);
