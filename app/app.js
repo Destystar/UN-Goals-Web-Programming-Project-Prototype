@@ -49,7 +49,7 @@ app.get("/team", (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log("Connection Successful");
+  console.log("Connection Successful to port 8080");
 });
 
 app.get("/", (req, res) => {
