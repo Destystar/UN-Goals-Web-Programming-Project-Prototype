@@ -2,6 +2,43 @@ var express = require("express");
 var app = express();
 var port = 8080;
 var path = require("path");
+const nodemailer = require("nodemailer");
+
+//email stuff
+
+var email, fullName;
+// Create a transporter object
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: "un.sdg.newsletter@gmail.com",
+    pass: "xpxo hjuu cayz zvao",
+  },
+});
+
+app.post("/signup", (req, res) => {
+  console.log(req.body);
+});
+
+// Configure the mailoptions object
+const mailOptions = {
+  from: "un.sdg.newsletter@gmail.com",
+  to: email,
+  subject: "Newsletter Signup",
+  text: `Thank you ${fullName} for signing up to our newsletter`,
+};
+
+async function sendEmail(email, name) {
+  transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+      console.log("Error:", error);
+    } else {
+      console.log("Email sent: ", info.response);
+    }
+  });
+}
 
 //set the view engine to ejs
 app.set("view engine", "ejs");
