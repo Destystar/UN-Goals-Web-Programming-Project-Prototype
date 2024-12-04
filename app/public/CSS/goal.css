@@ -46,11 +46,11 @@ body {
 #Extra {
   padding-left: 12rem;
   padding-right: 2rem;
-  width: 30%;
+  width: 35%;
 }
 
 #SDG_logo {
-  width: 22%;
+  width: 30%;
 }
 
 .navbar {
@@ -73,4 +73,41 @@ body {
 li a:visited {
   color: #03dac5;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar {
+  font-size: 20px;
+  }
+
+  #Img_summary, #Img_stats {
+    flex-direction: column; 
+    padding: 2rem; 
+    text-align: center; 
+  }
+
+  #Summary {
+    padding: 0;
+    margin-top: 1rem; 
+    font-size: 18px; 
+  }
+
+  #SDG_logo {
+    width: 50%;
+  }
+
+  #Extra {
+    width: 50%;
+    margin-top: 20px; 
+    margin-right: 150px;
+  }
+
+  #Stats {
+    padding: 0; 
+  }
+
+  #List li {
+    font-size: 14px;
+    margin-top: 12px;
+  }
 }
