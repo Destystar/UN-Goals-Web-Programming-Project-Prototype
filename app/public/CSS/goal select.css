@@ -64,11 +64,10 @@ li a:visited {
   filter: sepia(0);
 }
 
-/* Medium Screens (Between 360px and 900px) */
 @media only screen and (max-width: 900px) {
   .navbar {
     font-size: 20px;
-  }
+  } 
 
   .container {
     display: grid;
@@ -106,7 +105,7 @@ li a:visited {
   }
 }
 
-@media only screen and (max-width: 530px) {
+@media only screen and (max-width: 580px) {
   body {
     overflow-y: scroll; 
   }
