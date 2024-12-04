@@ -65,37 +65,41 @@ app.get("/health.json", (req, res) => {
 });
 
 // signup form submission
-app.post("/signup", async (req, res) => {
-  try {
-    const { name, email, comment } = req.body;
+app.post("/signup", (req, res) => {
+  //try {
+  const name = req.body.name;
+  const email = req.body.email;
+  const comment = req.body.comment;
 
-    // Create transporter object
-    let transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
-      auth: {
-        user: "un.sdg.newsletter@gmail.com",
-        pass: "@UNsdgProject",
-      },
-    });
+  console.log(req.body);
 
-    // Configure mail options
-    const mailOptions = {
-      from: "un.sdg.newsletter@gmail.com",
-      to: email,
-      subject: "Newsletter Signup",
-      text: `Thank you ${name} for signing up to our newsletter`,
-    };
+  // Create transporter object
+  let transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user: "un.sdg.newsletter@gmail.com",
+      pass: "@UNsdgProject",
+    },
+  });
 
-    // Send email
-    await transporter.sendMail(mailOptions);
+  // Configure mail options
+  const mailOptions = {
+    from: "un.sdg.newsletter@gmail.com",
+    to: email,
+    subject: "Newsletter Signup",
+    text: `Thank you ${name} for signing up to our newsletter`,
+  };
 
-    res.render("signup", { message: "Sign Up successful!" });
-  } catch (error) {
-    console.error("Error in signup route:", error);
-    res.status(500).render("signup", { error: "Failed to Sign Up" });
-  }
+  // Send email
+  transporter.sendMail(mailOptions);
+
+  res.render("signup", { message: "Sign Up successful!" });
+  // } catch (error) {
+  //   console.error("Error in signup route:", error);
+  //   res.status(500).render("signup", { error: "Failed to Sign Up" });
+  // }
 });
 
 app.listen(port, () => {
