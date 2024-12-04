@@ -1,36 +1,66 @@
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.querySelector("form");
 
-  form.addEventListener("submit", async function (e) {
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    try {
-      const nameInput = document.getElementById("Signup-name");
-      const emailInput = document.getElementById("Signup-email");
-      const commentInput = document.getElementById("Signup-comment");
+    //try {
+    const nameInput = document.getElementById("Signup-name");
+    const emailInput = document.getElementById("Signup-email");
+    const commentInput = document.getElementById("Signup-comment");
 
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData);
+    var name = nameInput.value;
+    var email = emailInput.value;
+    var comment = commentInput.value;
 
-      const response = await fetch("/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+    const formBody = {
+      name: name,
+      email: email,
+      comment: comment,
+    };
+
+    console.log(data);
+
+    var response;
+
+    fetch("/signup", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formBody),
+    })
+      .then((response) => response.json())
+      .then((responsedata) => {
+        response = responsedata;
+      })
+      .then(() => {
+        for (const [key, value] of Object.entries(response)) {
+          console.log(`${key}: ${value}`);
+        }
+        if (response.send) {
+          console.log("Sending the email");
+          window.alert("Thank you for signing up");
+          form.reset();
+        } else {
+          console.log("failed to send email");
+        }
       });
 
-      if (response.ok) {
-        alert("Thank you! We will send you an email.");
-        form.reset();
-      } else {
-        const errorMessage = await response.text();
-        throw new Error(errorMessage);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      alert("An error occurred. Please try again.");
-    }
+    // response alerts for signup (alert for both error and successful sign up)
+    // if (response.ok) {
+    //   alert("Thank you for signing up!");
+    //   form.reset();
+    // } else {
+    //   const errorMessage = await response.text();
+    //   throw new Error(errorMessage);
+    // }
+    //} catch (error) {
+    //console.error("Error:", error);
+    //alert("An error occurred. Please try again.");
+    //}
   });
 });
 
