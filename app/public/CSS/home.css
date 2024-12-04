@@ -14,7 +14,7 @@ body {
 
 h1 {
   padding-top: 3rem;
-  padding-bottom: 5rem;
+  padding-bottom: 2rem;
   text-align: center;
 }
 
@@ -49,6 +49,8 @@ h1 {
 #Button_container {
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
+  margin-right: 1.5rem;
 }
 
 #Newsletter_button {
@@ -84,4 +86,49 @@ h1 {
 li a:visited {
   color: #03dac5;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .navbar {
+    font-size: 20px;
+  }
+
+  #Group_info {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  #Group_info h3 {
+    margin-bottom: 1rem;
+  }
+
+  h1 {
+    margin-bottom: 0px;
+  }
+
+  #Name_list {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    gap: 1.5rem; 
+    list-style: none; 
+    padding: 0;
+
+  }
+
+  #Name_list li {
+    text-decoration: underline #b030b0;
+    text-decoration-thickness: 2px;
+    padding: 0;
+  }
+
+  .Main_content {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  #Summary {
+    padding: 1rem; 
+    padding-top: 50px;
+  }
 }
