@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (response.send) {
           console.log("Sending the email");
           window.alert("Thank you for signing up");
+          form.reset();
         } else {
           console.log("failed to send email");
         }

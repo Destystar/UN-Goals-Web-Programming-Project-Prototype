@@ -1,7 +1,7 @@
 var express = require("express");
 var app = express();
 var port = 8080;
-var path = require("path");
+var bodyParser = require("body-parser");
 
 //set the view engine to ejs
 app.set("view engine", "ejs");
@@ -63,6 +63,10 @@ app.get("/health.json", (req, res) => {
     }
   });
 });
+
+// body parser set up
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json);
 
 // signup form submission
 app.post("/signup", (req, res) => {
