@@ -83,3 +83,52 @@ li a:visited {
   color: #03dac5;
   text-decoration: none;
 }
+
+@media screen and (max-width: 700px) {
+  .navbar {
+    font-size: 20px;
+  }
+
+  .Main {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    gap: 2rem; 
+    margin-bottom: 1rem;
+  }
+
+  .Member_group {
+    display: flex;
+    flex-direction: column; 
+    gap: 1.5rem; 
+    width: 90%; 
+    margin: 0 auto; 
+  }
+
+  .Member {
+    text-align: center; 
+    padding: 1rem; 
+    border: 1px solid #b030b0; 
+    border-radius: 10px; 
+    background-color: #1f1f1f; 
+  }
+
+  .Member_name {
+    font-size: 18px; 
+  }
+
+  .Member_bio,
+  .Role,
+  .Responsibilities,
+  .Contributions {
+    font-size: 14px; 
+  }
+
+  .Responsibilities_list,
+  .Contributions_list {
+    list-style-position: inside;
+    text-align: center;
+    padding-left: 0;
+  }
+
+}
