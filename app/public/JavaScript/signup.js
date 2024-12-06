@@ -4,6 +4,8 @@ document.addEventListener("DOMContentLoaded", function () {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
+    console.log("Running Submission");
+
     //try {
     const nameInput = document.getElementById("Signup-name");
     const emailInput = document.getElementById("Signup-email");
@@ -21,7 +23,8 @@ document.addEventListener("DOMContentLoaded", function () {
       comment: comment,
     };
 
-    console.log(data);
+    console.log("data :" + data);
+    console.log("Manual FormBody :" + formBody);
 
     var response;
 
