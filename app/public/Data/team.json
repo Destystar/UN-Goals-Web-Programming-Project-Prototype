@@ -1,0 +1,74 @@
+{
+    "title": "Team Info",
+    "header": "Team Members",
+    "members": [
+        {
+            "name": "Artemy Kourtchev",
+            "bio": "Undergraduate student at UEA studying Computer Science",
+            "role": "Team Member",
+            "responsibilities": [
+                "Setting Up Project",
+                "Maintaining GitHub",
+                "Coding",
+                "Module Management"
+            ],
+            "contributions": [
+                "Writing HTML Code",
+                "Setting Up EJS Pages",
+                "Writing base CSS code",
+                "Client Side JavaScript"
+            ]
+        },
+        {
+            "name": "Oliver Brightwell",
+            "bio": "Enter Short Bio",
+            "role": "Team Member",
+            "responsibilities": [
+                "Coding",
+                "Responsibility 2",
+                "Responsibility 3",
+                "Responsibility 4"
+            ],
+            "contributions": [
+                "Made all web pages resposive",
+                "Created json files for dynamically loading content",
+                "Contribution 3",
+                "Contribution 4"
+            ]
+        },
+        {
+            "name": "Ben Maddison",
+            "bio": "My favourite food is beans on toast",
+            "role": "Team Member",
+            "responsibilities": [
+                "Setting up Ejs pages",
+                "Nav Bar functionality",
+                "Server side JavaScript",
+                "Site Guide"
+            ],
+            "contributions": [
+                "Contribution 1",
+                "Contribution 2",
+                "Contribution 3",
+                "Contribution 4"
+            ]
+        },
+        {
+            "name": "Ahmed Mokhles",
+            "bio": "Enter Short Bio",
+            "role": "Enter role",
+            "responsibilities": [
+                "Responsibility 1",
+                "Responsibility 2",
+                "Responsibility 3",
+                "Responsibility 4"
+            ],
+            "contributions": [
+                "Contribution 1",
+                "Contribution 2",
+                "Contribution 3",
+                "Contribution 4"
+            ]
+        }
+    ]
+}
