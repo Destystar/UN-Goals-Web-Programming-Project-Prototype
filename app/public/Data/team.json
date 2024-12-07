@@ -41,16 +41,16 @@
             "bio": "My favourite food is beans on toast",
             "role": "Team Member",
             "responsibilities": [
+                "Trello Management",
+                "Server Side JavaScript",
+                "Error fixing",
+                "Organising meetings"
+            ],
+            "contributions": [
                 "Setting up Ejs pages",
                 "Nav Bar functionality",
                 "Server side JavaScript",
                 "Site Guide"
-            ],
-            "contributions": [
-                "Contribution 1",
-                "Contribution 2",
-                "Contribution 3",
-                "Contribution 4"
             ]
         },
         {
