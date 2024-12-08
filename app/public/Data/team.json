@@ -59,15 +59,11 @@
             "role": "Team Member",
             "responsibilities": [
                 "Team Info page",
-                "Dynamic loading logic",
-                "Responsibility 3",
-                "Responsibility 4"
+                "Dynamic loading logic"
             ],
             "contributions": [
                 "Javascript for dynamically loading content",
-                "Reorganized project structure",
-                "Contribution 3",
-                "Contribution 4"
+                "Reorganized project structure"
             ]
         }
     ]
