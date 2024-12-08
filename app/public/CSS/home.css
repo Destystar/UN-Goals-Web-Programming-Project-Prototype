@@ -88,6 +88,10 @@ li a:visited {
   text-decoration: none;
 }
 
+.navbar ul li a.active {
+  color: #ffd700; 
+}
+
 @media only screen and (max-width: 900px) {
   .navbar {
     font-size: 20px;

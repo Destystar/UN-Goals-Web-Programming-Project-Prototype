@@ -22,19 +22,15 @@
         },
         {
             "name": "Oliver Brightwell",
-            "bio": "Enter Short Bio",
+            "bio": "Computer Science Student at UEA",
             "role": "Team Member",
             "responsibilities": [
-                "Coding",
-                "Responsibility 2",
-                "Responsibility 3",
-                "Responsibility 4"
+                "Coding"
             ],
             "contributions": [
                 "Made all web pages resposive",
                 "Created json files for dynamically loading content",
-                "Contribution 3",
-                "Contribution 4"
+                "Made navigation bar responsive"
             ]
         },
         {

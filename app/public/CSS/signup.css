@@ -46,6 +46,10 @@ li a:visited {
   text-decoration: none;
 }
 
+.navbar ul li a.active {
+  color: #ffd700; 
+}
+
 .Signup {
   position: relative;
   height: 100vh;

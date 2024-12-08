@@ -78,6 +78,10 @@ h1 {
   list-style-type: none;
 }
 
+.navbar ul li a.active {
+  color: #ffd700; 
+}
+
 .navbar ul li a,
 li a:visited {
   color: #03dac5;

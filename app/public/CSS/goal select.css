@@ -33,6 +33,10 @@ li a:visited {
   text-decoration: none;
 }
 
+.navbar ul li a.active {
+  color: #ffd700; 
+}
+
 .Images {
   margin: 0;
   padding: 0;
