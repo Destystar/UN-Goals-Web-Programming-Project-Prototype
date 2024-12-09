@@ -5,7 +5,7 @@ const headerElement = document.querySelector("#header");
 const groupInfoElement = document.querySelector("#Group_info");
 const summaryElement = document.querySelector("#Summary");
 const centerContent = document.querySelector("#Center_content");
-const imageDiv = document.querySelector("Image");
+const imageDiv = document.querySelector("Img");
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch(filePath)
