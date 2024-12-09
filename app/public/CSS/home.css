@@ -24,13 +24,26 @@ h1 {
 }
 
 #Group_info {
-  padding-right: 3rem;
+  padding-right: 5rem;
   padding-left: 3rem;
 }
 
 #Group_info h3 {
   text-decoration: underline #602080;
   text-decoration-thickness: 3px;
+}
+
+#Center_content {
+  display: flex;
+  flex-direction: column;
+}
+
+#Logo {
+  height: 35%;
+  width: 15%;
+  padding-bottom: 2rem;
+  margin-left: auto;
+  margin-right: 50%;
 }
 
 #Name_list li {
@@ -42,8 +55,8 @@ h1 {
 #Summary {
   font-size: larger;
   line-height: 30px;
-  padding-right: 8rem;
-  padding-left: 2rem;
+  padding-right: 20rem;
+  padding-left: 10rem;
 }
 
 #Button_container {
@@ -54,6 +67,8 @@ h1 {
 }
 
 #Newsletter_button {
+  display: flex;
+  justify-content: center;
   align-items: center;
   background-image: linear-gradient(144deg, #602080, #b030b0);
   border: 0;
@@ -89,7 +104,7 @@ li a:visited {
 }
 
 .navbar ul li a.active {
-  color: #ffd700; 
+  color: #ffd700;
 }
 
 @media only screen and (max-width: 900px) {
@@ -112,12 +127,11 @@ li a:visited {
 
   #Name_list {
     display: flex;
-    flex-direction: row; 
-    justify-content: center; 
-    gap: 1.5rem; 
-    list-style: none; 
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
     padding: 0;
-
   }
 
   #Name_list li {
@@ -127,12 +141,12 @@ li a:visited {
   }
 
   .Main_content {
-    flex-direction: column; 
+    flex-direction: column;
     align-items: center;
   }
 
   #Summary {
-    padding: 1rem; 
+    padding: 1rem;
     padding-top: 50px;
   }
 }

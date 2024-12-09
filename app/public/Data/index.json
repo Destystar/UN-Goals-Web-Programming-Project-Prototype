@@ -2,6 +2,8 @@
   "title": "UN Sustainability Development Goals",
   "header": "UN Sustainability Development Goals",
   "header2": "Group Members",
+  "logo": "Assets/UN_Logo.png",
+  "alt": "Icon for UN Logo",
   "member-list": [
     "Artemy Kourtchev",
     "Oliver Brightwell",
