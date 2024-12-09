@@ -121,6 +121,10 @@ li a:visited {
     padding: 1rem 0;
   }
 
+  #Img {
+    margin-right: auto;
+  }
+
   #Group_info h3 {
     margin-bottom: 1rem;
   }
