@@ -5,7 +5,7 @@ const headerElement = document.querySelector("#header");
 const groupInfoElement = document.querySelector("#Group_info");
 const summaryElement = document.querySelector("#Summary");
 const centerContent = document.querySelector("#Center_content");
-const imageDiv = document.querySelector("Img");
+const imageDiv = document.querySelector("#Img");
 
 document.addEventListener("DOMContentLoaded", () => {
   fetch(filePath)
@@ -27,9 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       let logoElement = document.createElement("img");
-      imgElement.setAttribute("id", "Logo");
-      imgElement.setAttribute("src", responseData["logo"]);
-      imgElement.setAttribute("alt", responseData["alt"]);
+      logoElement.setAttribute("id", "Logo");
+      logoElement.setAttribute("src", responseData["logo"]);
+      logoElement.setAttribute("alt", responseData["alt"]);
 
       let pElement = document.createElement("p");
       pElement.innerText = responseData["summary"];
