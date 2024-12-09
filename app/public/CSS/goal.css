@@ -22,7 +22,7 @@ body {
 #Summary {
   padding-left: 6rem;
   padding-right: 6rem;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 28px;
 }
 
@@ -36,11 +36,12 @@ body {
 #Stats {
   padding-left: 2rem;
   padding-right: 6rem;
+  font-size: 24px;
 }
 
 #List li {
   margin-top: 18px;
-  font-size: 16px;
+  font-size: 24px;
 }
 
 #Extra {
@@ -89,7 +90,7 @@ li a:visited {
   #Summary {
     padding: 0;
     margin-top: 1rem; 
-    font-size: 18px; 
+    font-size: 20px; 
   }
 
   #SDG_logo {
@@ -107,7 +108,7 @@ li a:visited {
   }
 
   #List li {
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 12px;
   }
 }

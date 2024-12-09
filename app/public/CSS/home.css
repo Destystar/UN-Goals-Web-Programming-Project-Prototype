@@ -16,6 +16,7 @@ h1 {
   padding-top: 3rem;
   padding-bottom: 2rem;
   text-align: center;
+  font-size: 40px;
 }
 
 .Main_content {
@@ -26,6 +27,7 @@ h1 {
 #Group_info {
   padding-right: 5rem;
   padding-left: 3rem;
+  font-size: 30px;
 }
 
 #Group_info h3 {
@@ -50,11 +52,12 @@ h1 {
   padding-top: 1rem;
   text-decoration: underline #b030b0;
   text-decoration-thickness: 2px;
+  font-size: 25px;
 }
 
 #Summary {
-  font-size: larger;
-  line-height: 30px;
+  font-size: 25px;
+  line-height: 40px;
   padding-right: 20rem;
   padding-left: 10rem;
 }
@@ -107,7 +110,7 @@ li a:visited {
   color: #ffd700;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1200px) {
   .navbar {
     font-size: 20px;
   }

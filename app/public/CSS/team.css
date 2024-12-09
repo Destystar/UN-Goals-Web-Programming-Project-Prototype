@@ -20,6 +20,7 @@ h1 {
 
 .List_title {
   padding-bottom: 0.5rem;
+  font-size: 20px;
 }
 
 .Role {
@@ -28,14 +29,17 @@ h1 {
 
 .Responsibilities {
   padding-bottom: 1rem;
+  font-size: 20px;
 }
 
 .Responsibilities_list li {
   padding-bottom: 0.25rem;
+  font-size: 15px;
 }
 
 .Contributions_list li {
   padding-bottom: 0.25rem;
+  font-size: 15px;
 }
 
 .Main {
