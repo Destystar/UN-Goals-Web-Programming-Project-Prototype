@@ -83,7 +83,7 @@ h1 {
 }
 
 .navbar ul li a.active {
-  color: #ffd700; 
+  color: #1282a2;
 }
 
 .navbar ul li a,
@@ -99,37 +99,37 @@ li a:visited {
 
   .Main {
     display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    gap: 2rem; 
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
     margin-bottom: 1rem;
   }
 
   .Member_group {
     display: flex;
-    flex-direction: column; 
-    gap: 1.5rem; 
-    width: 90%; 
-    margin: 0 auto; 
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .Member {
-    text-align: center; 
-    padding: 1rem; 
-    border: 1px solid #b030b0; 
-    border-radius: 10px; 
-    background-color: #1f1f1f; 
+    text-align: center;
+    padding: 1rem;
+    border: 1px solid #b030b0;
+    border-radius: 10px;
+    background-color: #1f1f1f;
   }
 
   .Member_name {
-    font-size: 18px; 
+    font-size: 18px;
   }
 
   .Member_bio,
   .Role,
   .Responsibilities,
   .Contributions {
-    font-size: 14px; 
+    font-size: 14px;
   }
 
   .Responsibilities_list,
@@ -138,5 +138,4 @@ li a:visited {
     text-align: center;
     padding-left: 0;
   }
-
 }
