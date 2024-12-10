@@ -108,7 +108,7 @@ li a:visited {
 }
 
 .navbar ul li a.active {
-  color: #ffd700;
+  color: #1282a2;
 }
 
 @media only screen and (max-width: 1200px) {

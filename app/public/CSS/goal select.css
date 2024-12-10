@@ -34,7 +34,7 @@ li a:visited {
 }
 
 .navbar ul li a.active {
-  color: #ffd700; 
+  color: #1282a2;
 }
 
 .Images {
@@ -71,7 +71,7 @@ li a:visited {
 @media only screen and (max-width: 900px) {
   .navbar {
     font-size: 20px;
-  } 
+  }
 
   .container {
     display: grid;
@@ -111,7 +111,7 @@ li a:visited {
 
 @media only screen and (max-width: 580px) {
   body {
-    overflow-y: scroll; 
+    overflow-y: scroll;
   }
 
   .navbar {
@@ -138,6 +138,6 @@ li a:visited {
   }
 
   .container {
-    min-height: 120vh; 
+    min-height: 120vh;
   }
 }
